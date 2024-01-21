@@ -56,6 +56,13 @@ const nonHtmlIndicators = [
   "0000-00-00T00:00:00".split("0").join("\\d"), // ISO 8601 timestamps in logs
   "^\\s*at .+(.+)", // common stack trace format
   '^\\s*{\\s*"[^"]*"\\s*:', // single-line JSON property
+
+  `StylePtr<.*>()`, // ProffieOS style template
+  `StyleNormalPtr<.*,.*>()`, // ProffieOS style template
+  `Layers<.*>`, // ProffieOS style template
+  `InOutHelper<.*>`, // ProffieOS style template
+  `InOutTrL<.*>`, // ProffieOS style template
+  `AlphaL<.*>`, // ProffieOS style template
 ];
 
 const htmlIndicators = [
